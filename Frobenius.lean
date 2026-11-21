@@ -1,7 +1,9 @@
 module
 
 public import Frobenius.KKM.Main
+public import Frobenius.KKM.Prop2
 public import Frobenius.Mobius.Levels
+public import Frobenius.Mobius.ModEight
 public import Frobenius.Levels.Found
 public import Frobenius.Levels.Upper
 public import Frobenius.Levels.Lower
@@ -57,3 +59,8 @@ public import Frobenius.Levels.NonVacM
 public import Frobenius.Levels.MonoPXY
 public import Frobenius.Levels.ThmRUp
 public import Frobenius.Levels.MonoPXYTwo
+public import Frobenius.Levels.MultFlag
+public import Frobenius.Mobius.LowerGen
+public import Frobenius.Mobius.Closed
+public import Frobenius.Levels.A1Shape
+public import Frobenius.Levels.A2Gen

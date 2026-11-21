@@ -5,7 +5,7 @@ authors:
   - family-names: Farland
     given-names: Joseph S.
     orcid: "https://orcid.org/0009-0007-6809-804X"
-version: "1.0.0"
+version: "1.1.0"
 doi: 10.5281/zenodo.24410644
 identifiers:
   - type: doi
@@ -17,7 +17,7 @@ identifiers:
   - type: other
     value: "PALOMAR-2026-11-21-000014"
     description: "Palomar registry entry, version 1 (commit 8587838137d563ef938e2d0db66ac31043cce7ad)"
-date-released: "2026-11-20"
+date-released: "2026-11-21"
 license: Apache-2.0
 repository-code: "https://github.com/jkfarland-bot/frobenius"
 abstract: >-
@@ -43,5 +43,5 @@ references:
       - family-names: Farland
         given-names: Joseph S.
     year: 2026
-    doi: 10.5281/zenodo.24411195
-    notes: "Preprint; every theorem is proved in this repository"
+    doi: 10.5281/zenodo.24411194
+    notes: "Preprint (all versions; version 2 matches this release); every theorem is proved in this repository"

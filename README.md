@@ -5,7 +5,7 @@
 Lean 4 / Mathlib formalization accompanying Joseph S. Farland, *Minimal polynomials of
 sum z^(p^n) modulo prime powers: a proof of a conjecture of Kauers, Krattenthaler and Müller,
 and the exact number of divisor levels for the Möbius function* (preprint,
-[doi:10.5281/zenodo.24411195](https://doi.org/10.5281/zenodo.24411195)). The preprint contains only results proved here; every theorem in it is
+all versions [doi:10.5281/zenodo.24411194](https://doi.org/10.5281/zenodo.24411194); version 2 matches this release). The preprint contains only results proved here; every theorem in it is
 followed by the names of its Lean proofs, and [CLAIMS.md](CLAIMS.md) gives the same map.
 
 **AI assistance:** the Lean code in this repository was written by Claude (Anthropic), an AI
@@ -47,9 +47,31 @@ For a prime `p` and `k ≥ 1`, let `S(p^k)` be the Kempner value, the least `N` 
   `min(p^{r_f}, min{m : v_p(m!) + ∑_{j<r_f} (d(j+1) - d(j)) ⌊m/p^j⌋ ≥ k})`, with `d` the depth
   flag of `f`.
 
-Stronger forms of some results, results over coefficient rings Z[chi] and further results on
-other Frobenius lifts are proved on paper and will appear in a companion preprint; they are not
-claimed here.
+**Added in version 1.1.0** (seven modules, each verified by a seat that did not write it):
+
+* **The lower bound in full** (`Frobenius/Mobius/LowerGen.lean`). If `c_0, …, c_L` in a ring `Λ`
+  that is a `ℤ/p^k`-algebra with `p^(k-1) ≠ 0` satisfy `∑_z c_z z^r = (-1)^r` for
+  `k ≤ r ≤ 2k - 1 + (p - 2) p^(k-1)`, then `L + 1 ≥ S(p^k)` (`thm_lower`); fewer rows suffice
+  (`lower_slice_shift`). An identity for `μ` required only at squarefree `n` already needs
+  `S(p^k) - 1` levels (`level_bound_squarefree`).
+* **Closed forms** (`Frobenius/Mobius/Closed.lean`): `S(p^k) = p (k - ⌊k/(p+1)⌋)` for
+  `k ≤ p^2 + p`, and `(p - 1) k < S(p^k) < (p - 1) k + p + s_p(K(p,k) - 1)`.
+* **The shape of the levels** (`Frobenius/Levels/A1Shape.lean`): over every commutative ring the
+  identity of level `S(p^k) - 1` can use only the levels `z = p i - 1`.
+* **The lower bound over every commutative ring** (`Frobenius/Levels/A2Gen.lean`): if
+  `p^(k-1) ∉ p^k O` and `f` is multiplicative on enough primes `q` with `f(q)` a unit modulo `p`, then
+  `L_f(p,k) = S(p^k) - 1`.
+* **Krattenthaler and Müller's Proposition 2** (`Frobenius/KKM/Prop2.lean`): their polynomial
+  for the modulus `p^(p+1)` does not vanish modulo `p^(p+1)` at `Φ_p`; the corrected polynomial
+  is the tower polynomial `A_2` for odd `p`.
+* **Multiplicative `f`** (`Frobenius/Levels/MultFlag.lean`): over `ℤ` and `ℤ_p` the depth flag is the
+  sorted list of the prime depths `ν_q = min {v_p f(q^a) : a ≥ 1, p ∤ a}`.
+* **The Mertens function modulo 8** (`Frobenius/Mobius/ModEight.lean`):
+  `μ ≡ 2 ζ * E_2(μ) - d_3 * E_2(μ * μ - 4a) (mod 8)`, and the summed form for `M(x)` through the
+  squarefree count and `D_3`.
+
+Results over coefficient rings Z[chi] and further results on other Frobenius lifts are proved on
+paper in the larger paper; they are not claimed here.
 
 ## Layout for the Palomar registry
 
@@ -86,6 +108,9 @@ claimed here.
 | `Frobenius/Mobius/Levels.lean` | `FrobCong` | Sections 2 to 4: the Frobenius congruence, the truncated expansion, Theorem 4.4 (`levels_sharp_kempner`), the identity modulo 8 |
 | `Frobenius/KKM/` | `Frobenius.KKM` | Section 5: the tower `A_a(z, Φ_p) = c_a δ^a(Φ_p)`, the digit products, the coefficient `d!` (`exists_coeff_evalPhi_eq_factorial`), Conjecture 4 (`minimal_degree_eq_kempner`) |
 | `Frobenius/Levels/` | `FrobLevel`, `FrobLevel.Dir`, `L8v`, `L10` | Sections 6 and 7: level counts over general rings, the Dirichlet ring, power series with the standard and other Frobenius lifts |
+| `Frobenius/Mobius/LowerGen.lean`, `Closed.lean`, `ModEight.lean` | `FrobCong` | Version 1.1.0: the lower bound in full, closed forms, the identity modulo 8 in displayed form |
+| `Frobenius/Levels/A1Shape.lean`, `A2Gen.lean`, `MultFlag.lean` | `FrobLevel.Dir` | Version 1.1.0: the shape of the levels, the lower bound over every commutative ring, multiplicative `f` |
+| `Frobenius/KKM/Prop2.lean` | `Frobenius.KKM` | Version 1.1.0: Krattenthaler and Müller's Proposition 2 and its correction |
 
 ## Run Palomar's checks
 
