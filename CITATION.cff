@@ -33,3 +33,12 @@ keywords:
   - delta-ring
   - Lean 4
   - formal verification
+references:
+  - type: article
+    title: "Minimal polynomials of sum z^(p^n) modulo prime powers: a proof of a conjecture of Kauers, Krattenthaler and Mueller, and the exact number of divisor levels for the Moebius function"
+    authors:
+      - family-names: Farland
+        given-names: Joseph S.
+    year: 2026
+    doi: 10.5281/zenodo.24411195
+    notes: "Preprint; every theorem is proved in this repository"

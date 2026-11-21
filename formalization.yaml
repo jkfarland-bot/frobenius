@@ -30,9 +30,9 @@ sources:
   - title: "Minimal polynomials of sum z^(p^n) modulo prime powers: a proof of a conjecture of Kauers, Krattenthaler and Müller, and the exact number of divisor levels for the Möbius function"
     authors:
       - "Joseph S. Farland"
-    id: "TEMPLATE: Zenodo DOI of the preprint, assigned at release"
+    id: "https://doi.org/10.5281/zenodo.24411195"
     type: "article"
-    location: "TEMPLATE: Preprint, version 1, Zenodo, release date and DOI URL"
+    location: "Preprint, version 1, Zenodo, 21 November 2026, https://doi.org/10.5281/zenodo.24411195"
     relationship: "formalizes"
     note: >-
       The preprint contains only results proved in this repository, each stated in its Lean form

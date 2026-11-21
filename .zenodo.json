@@ -25,6 +25,12 @@
   ],
   "related_identifiers": [
     {
+      "identifier": "10.5281/zenodo.24411195",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
       "identifier": "arXiv:1107.2015",
       "relation": "references",
       "scheme": "arxiv"

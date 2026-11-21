@@ -4,8 +4,8 @@
 
 Lean 4 / Mathlib formalization accompanying Joseph S. Farland, *Minimal polynomials of
 sum z^(p^n) modulo prime powers: a proof of a conjecture of Kauers, Krattenthaler and Müller,
-and the exact number of divisor levels for the Möbius function* (preprint, Zenodo DOI to be
-added at release). The preprint contains only results proved here; every theorem in it is
+and the exact number of divisor levels for the Möbius function* (preprint,
+[doi:10.5281/zenodo.24411195](https://doi.org/10.5281/zenodo.24411195)). The preprint contains only results proved here; every theorem in it is
 followed by the names of its Lean proofs, and [CLAIMS.md](CLAIMS.md) gives the same map.
 
 **AI assistance:** the Lean code in this repository was written by Claude (Anthropic), an AI
@@ -105,7 +105,10 @@ instances, planted errors).
 ## Citation
 
 Software, version 1.0.0: [10.5281/zenodo.24410645](https://doi.org/10.5281/zenodo.24410645). All versions: [10.5281/zenodo.24410644](https://doi.org/10.5281/zenodo.24410644).
-See [CITATION.cff](CITATION.cff). The preprint's DOI will be added when it is published.
+Preprint: J. S. Farland, *Minimal polynomials of sum z^(p^n) modulo prime powers: a proof of a
+conjecture of Kauers, Krattenthaler and Müller, and the exact number of divisor levels for the Möbius
+function*, Zenodo, 2026, [10.5281/zenodo.24411195](https://doi.org/10.5281/zenodo.24411195) (all versions [10.5281/zenodo.24411194](https://doi.org/10.5281/zenodo.24411194)).
+Every theorem of the preprint is proved in this repository. See [CITATION.cff](CITATION.cff).
 
 ## License
 
