@@ -1,5 +1,7 @@
 # Frobenius
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24410645.svg)](https://doi.org/10.5281/zenodo.24410645)
+
 Lean 4 / Mathlib formalization accompanying Joseph S. Farland, *Minimal polynomials of
 sum z^(p^n) modulo prime powers: a proof of a conjecture of Kauers, Krattenthaler and Müller,
 and the exact number of divisor levels for the Möbius function* (preprint, Zenodo DOI to be
@@ -99,6 +101,11 @@ The work was done by Claude Opus agent seats under the author's direction. Each 
 read by an independent cold reader with its own exact computations, and each Lean file was
 verified by a seat that did not write it (fresh rebuild, module-wide axiom collector, non-vacuity
 instances, planted errors).
+
+## Citation
+
+Software, version 1.0.0: [10.5281/zenodo.24410645](https://doi.org/10.5281/zenodo.24410645). All versions: [10.5281/zenodo.24410644](https://doi.org/10.5281/zenodo.24410644).
+See [CITATION.cff](CITATION.cff). The preprint's DOI will be added when it is published.
 
 ## License
 

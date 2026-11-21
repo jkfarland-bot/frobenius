@@ -6,6 +6,14 @@ authors:
     given-names: Joseph S.
     orcid: "https://orcid.org/0009-0007-6809-804X"
 version: "1.0.0"
+doi: 10.5281/zenodo.24410644
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24410644
+    description: "All versions (concept DOI)"
+  - type: doi
+    value: 10.5281/zenodo.24410645
+    description: "Version 1.0.0"
 date-released: "2026-11-20"
 license: Apache-2.0
 repository-code: "https://github.com/jkfarland-bot/frobenius"
