@@ -110,6 +110,10 @@ conjecture of Kauers, Krattenthaler and Müller, and the exact number of divisor
 function*, Zenodo, 2026, [10.5281/zenodo.24411195](https://doi.org/10.5281/zenodo.24411195) (all versions [10.5281/zenodo.24411194](https://doi.org/10.5281/zenodo.24411194)).
 Every theorem of the preprint is proved in this repository. See [CITATION.cff](CITATION.cff).
 
+Palomar registry: [PALOMAR-2026-11-21-000014](https://palomar-registry.org/), version 1, approved
+21 November 2026 for commit `8587838137d563ef938e2d0db66ac31043cce7ad` (the fourteen statements of
+`Challenge.lean`, checked against `Solution.lean` by `lake comparator`).
+
 ## License
 
 Apache-2.0 (this repository). Cited papers keep their own licences.
