@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Frobenius: Lean 4 formalization of the Kauers-Krattenthaler-Mueller conjecture for every prime and of the exact number of divisor levels for the Moebius function"
+authors:
+  - family-names: Farland
+    given-names: Joseph S.
+    orcid: "https://orcid.org/0009-0007-6809-804X"
+version: "1.0.0"
+date-released: "2026-11-20"
+license: Apache-2.0
+repository-code: "https://github.com/jkfarland-bot/frobenius"
+abstract: >-
+  For a prime p, a monic A in Z[z][t] of t-degree d with A(z, sum z^(p^n)) congruent to 0 modulo
+  p^gamma exists if and only if p^gamma divides d!, which proves Conjecture 4 of Kauers,
+  Krattenthaler and Mueller for every prime. The least number of divisor levels for the Moebius
+  function modulo p^k is S(p^k) - 1, S the Kempner function; the bound holds for every Dirichlet
+  inverse over every commutative ring, and a depth-flag formula gives the exact count for units of
+  Z_p[[x_1, ..., x_n]] and of the Dirichlet ring over Z and Z_p. Every theorem of the accompanying
+  preprint is machine-checked in Lean 4. Prepared with Claude (Anthropic). No external human referee
+  has reviewed this work.
+keywords:
+  - Kempner function
+  - Moebius function
+  - Frobenius lift
+  - delta-ring
+  - Lean 4
+  - formal verification

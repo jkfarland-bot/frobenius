@@ -1,0 +1,248 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Frobenius: Frobenius congruences for the Möbius function and the exact number of divisor levels"
+  description: >-
+    For a prime p and k >= 1, the least L for which the Möbius function is congruent modulo p^k
+    to a sum of zeta^z * E_p(g_z) over the levels z <= L, with zeta^z the Dirichlet powers of
+    zeta, E_p the Frobenius pushforward (E_p g)(j^p) = g(j) and integer valued g_z, is
+    S(p^k) - 1, where S(p^k) is the Kempner value, the least N with p^k dividing N!. The same
+    upper bound holds for the Dirichlet inverse of every f with f(1) a unit, over every
+    commutative ring; over Z and Z_p it is exact as soon as there are n primes q with p not
+    dividing f(q) and p^n >= S(p^k), with no multiplicativity assumed. In the power series rings
+    Z[[x_1, ..., x_n]] and Z_p[[x_1, ..., x_n]] with the lift x_i -> x_i^p, and in the Dirichlet
+    ring over Z and Z_p, the exact level count of every unit is given by a depth-flag formula of
+    Legendre type. The development also proves Conjecture 4 of Kauers, Krattenthaler and Müller
+    for every prime p: the least t-degree of a monic A in Z[z][t] with A(z, Phi_p(z)) congruent
+    to 0 modulo p^gamma, where Phi_p(z) is the sum of z^(p^n), is S(p^gamma).
+  authors:
+    - "Joseph S. Farland"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Joseph S. Farland"
+
+classification:
+  arxiv: ["math.NT", "math.AC"]
+  msc2020: ["11A25", "11B50", "13F25", "13A35", "68V20"]
+
+sources:
+  - title: "Minimal polynomials of sum z^(p^n) modulo prime powers: a proof of a conjecture of Kauers, Krattenthaler and Müller, and the exact number of divisor levels for the Möbius function"
+    authors:
+      - "Joseph S. Farland"
+    id: "TEMPLATE: Zenodo DOI of the preprint, assigned at release"
+    type: "article"
+    location: "TEMPLATE: Preprint, version 1, Zenodo, release date and DOI URL"
+    relationship: "formalizes"
+    note: >-
+      The preprint contains only results proved in this repository, each stated in its Lean form
+      and followed by the names of its Lean proofs; CLAIMS.md gives the same map. The paper and
+      this formalization were produced together by Claude Opus agent seats under the author's
+      direction (see automation). Theorems 4.4, 5.1, 6.1, 7.4 and 7.7 and Corollary 7.8 (over Z
+      and Z_p) are the headline statements of Challenge.lean.
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "A method for determining the mod-2^k behaviour of recursive sequences, with applications to subgroup counting"
+    authors:
+      - "Manuel Kauers"
+      - "Christian Krattenthaler"
+      - "Thomas W. Müller"
+    id: "https://doi.org/10.37236/2433"
+    type: "article"
+    location: "Electron. J. Combin. 18(2) (2012), P37; arXiv:1107.2015"
+    relationship: "background"
+    note: >-
+      States Conjecture 4 for p = 2 (minimal polynomials of Phi_2 modulo 2^gamma have degree
+      S(2^gamma)) and proves the lower bound (Lemma 1). The development proves the conjecture;
+      its lower bound has its own proof (Frobenius.KKM.pow_dvd_factorial_of_vanishesMod).
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "A method for determining the mod-p^k behaviour of recursive sequences"
+    authors:
+      - "Christian Krattenthaler"
+      - "Thomas W. Müller"
+    id: "https://doi.org/10.1007/s00010-025-01195-0"
+    type: "article"
+    location: "Aequationes Math. 99 (2025), no. 6, 2505-2547; arXiv:1508.02580"
+    relationship: "background"
+    note: >-
+      States Conjecture 4 for every prime p, which this development proves
+      (Frobenius.kkm_conjecture4); the journal version still describes it as unproven.
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "Dwork crystals III: from excellent Frobenius lifts towards supercongruences"
+    authors:
+      - "Frits Beukers"
+      - "Masha Vlasenko"
+    id: "https://doi.org/10.1093/imrn/rnad101"
+    type: "article"
+    location: "Int. Math. Res. Not. IMRN 2023, no. 23, 20433-20483; arXiv:2105.14841"
+    relationship: "background"
+    note: "Source of the truncated expansion with pk - 1 levels that Theorem 4.4 improves to S(p^k) - 1 for k > p."
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "Polynomials and their residue systems"
+    authors:
+      - "Aubrey J. Kempner"
+    type: "article"
+    location: "Trans. Amer. Math. Soc. 22 (1921), 240-266 and 267-288"
+    relationship: "background"
+    note: "The null-polynomial theorem (S(m) is the least degree of a monic integer polynomial vanishing modulo m), of which the lower bound of Theorem 4.4 is a variant."
+    license: "unknown"
+    author_endorsement: "n/a"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Formalized: every theorem, proposition, lemma and corollary of the preprint, in the form
+    stated there (see CLAIMS.md): the Frobenius congruence in the Dirichlet ring, the truncated
+    expansion, the exact level count L(p,k) = S(p^k) - 1 for the Möbius function and an identity
+    modulo 8 (namespace FrobCong); Conjecture 4 of Kauers, Krattenthaler and Müller for every
+    prime (namespace Frobenius.KKM); the upper bound S(p^k) - 1 for every f with f(1) a unit over
+    every commutative ring, the monic form and general upper bounds for every Frobenius lift, the
+    depth-flag formula for every unit of Z[[x_1..x_n]] and Z_p[[x_1..x_n]] with the standard lift
+    and for every f with f(1) a unit in the Dirichlet ring over Z and Z_p, its special cases, and
+    the sharpness of S(p^k) - 1 over Z and Z_p from n primes with p not dividing f(q) and
+    p^n >= S(p^k) (namespaces FrobLevel, FrobLevel.Dir). The repository also contains further
+    formalized results on other Frobenius lifts (namespaces FrobLevel, L8v, L10) that the
+    preprint does not use. Not formalized, and not claimed in the preprint: stronger forms of the
+    lower bound (from squarefree n only, over every Z/p^k-algebra, over general rings), the shape
+    z = pi - 1 of the levels over general rings, the results over Z[chi] (ramified or not), the
+    Laurent completion, and the remaining results on other lifts; these will appear in a
+    companion preprint. No conjecture is stated in the repository.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude Opus (Anthropic)"]
+      framework: "Claude agent seats (Claude.ai with code execution and the Claude Agent SDK), run under the author's team process"
+      tool_setup: >-
+        AI-generated: every Lean file was written by Claude Opus agent seats from the paper's
+        statements and proofs, compiled with lake against the pinned Mathlib, and checked by a
+        separate seat that did not write the code: a fresh rebuild, a module-wide axiom
+        collector (only propext, Classical.choice and Quot.sound), non-vacuity instances and
+        planted errors that must fail. The port to Lean and Mathlib v4.35.0-rc2 and the
+        module system was done by one seat and verified by another. Challenge.lean,
+        Frobenius/Statements.lean and Solution.lean were written by Claude Opus 5.5.
+      cost:
+        wall_time: "agent runs over several weeks, October and November 2026"
+        spend_usd: "not tracked"
+        hardware: "API-only plus a cloud workspace"
+      prompting_notes: >-
+        Each seat received a written brief: the statements to formalize with their paper
+        proofs, the forbidden constructs (sorry, native_decide, new axioms), and the checks
+        its verifier would run.
+  spend_usd: "not tracked"
+  notes: >-
+    The results, proofs, paper and Lean code were produced by Claude Opus agent seats under the
+    author's direction; the author chose the problems, ran the process and takes
+    responsibility for errors. Each paper proof was read by an independent cold reader with its
+    own exact computations, and each Lean file was verified by a seat that did not write it.
+
+fidelity:
+  divergences: >-
+    A level identity 1/f = sum f^z sigma(g_z) (mod p^k) is written without the inverse, as
+    p^k dividing 1 - f * sum f^z sigma(g_z); levelCount is 0 when no identity exists, so the
+    upper bounds are also stated through HasLevel (dirichlet_identity, and IsLeast in
+    flag_formula_int and flag_formula_padic). In Theorem 4.4 the
+    identity is required at every n, with integer valued g_z, and the congruence is
+    coefficientwise. The Kempner value is defined as an infimum, sInf {N | p^k divides N!}.
+    Theorem 6.1's hypothesis f(1) a unit is used as stated; Corollary 7.8 is over Z and Z_p
+    (no multiplicativity, n primes with p not dividing f(q) and p^n >= S(p^k)). In Theorem 7.4
+    the variables are indexed by Fin n and the lift is Mathlib's MvPowerSeries.expand p. In
+    Theorem 7.7 the rank r_f is a cardinal and p^infinity = infinity is encoded by the first
+    disjunct of dFlagValue. The Kempner value at k = 0 is 0 in Lean (the usual S(1) is 1); every
+    statement assumes k >= 1 except kkm_degrees, kkm_conjecture4 and kkm_greatest_modulus, where
+    gamma = 0 is allowed and 0 is the correct least degree.
+
+review:
+  status: "self-assessed"
+  reviewers:
+    - "none (no human referee); independent Claude Opus agent seats read every proof and verified every Lean file"
+  notes: >-
+    Each statement in Challenge.lean was compared with the paper by the seat that wrote it and
+    by an independent verifier. The definitions in Challenge.lean are not Comparator holes:
+    definition_names is empty, so Comparator checks every definition the statements use, body
+    included, against Frobenius/Statements.lean, and Solution.lean links those definitions to
+    the development by short bridge lemmas. No external referee has reviewed the paper or the
+    formalization.
+
+alignment:
+  namespace: "Frobenius"
+  statements:
+    - source: "Theorem 4.4"
+      lean: "Frobenius.mobius_levels"
+      module: "Challenge"
+      status: "proved"
+      note: "Both bounds: an identity with levels z <= S(p^k) - 1, and S(p^k) <= L + 1 for every identity of level L. Proved by FrobCong.levels_sharp_kempner."
+    - source: "Theorem 5.1, the set of degrees"
+      lean: "Frobenius.kkm_degrees"
+      module: "Challenge"
+      status: "proved"
+      note: "The t-degrees of monic A in Z[z][t] with A(z, Phi_p) = 0 (mod p^gamma) are exactly the d with p^gamma | d!."
+    - source: "Theorem 5.1 (Conjecture 4 of Kauers, Krattenthaler and Müller)"
+      lean: "Frobenius.kkm_conjecture4"
+      module: "Challenge"
+      status: "proved"
+      note: "The least such degree is S(p^gamma), for every prime p and every gamma >= 0."
+    - source: "Theorem 5.1, best modulus"
+      lean: "Frobenius.kkm_greatest_modulus"
+      module: "Challenge"
+      status: "proved"
+      note: "For each d the largest gamma is v_p(d!)."
+    - source: "Theorem 6.1, the identity"
+      lean: "Frobenius.dirichlet_identity"
+      module: "Challenge"
+      status: "proved"
+      note: "Over every commutative ring."
+    - source: "Theorem 6.1"
+      lean: "Frobenius.dirichlet_upper"
+      module: "Challenge"
+      status: "proved"
+      note: "L_f(p,k) + 1 <= S(p^k) over every commutative ring."
+    - source: "Corollary 7.8 over Z, lower bound"
+      lean: "Frobenius.dirichlet_lower_int"
+      module: "Challenge"
+      status: "proved"
+      note: "No multiplicativity; n primes with p not dividing f(q)."
+    - source: "Corollary 7.8 over Z, exact value"
+      lean: "Frobenius.dirichlet_exact_int"
+      module: "Challenge"
+      status: "proved"
+      note: "With S(p^k) <= p^n."
+    - source: "Corollary 7.8 over Z_p, lower bound"
+      lean: "Frobenius.dirichlet_lower_padic"
+      module: "Challenge"
+      status: "proved"
+      note: "As over Z."
+    - source: "Corollary 7.8 over Z_p, exact value"
+      lean: "Frobenius.dirichlet_exact_padic"
+      module: "Challenge"
+      status: "proved"
+      note: "As over Z."
+    - source: "Theorem 7.4 over Z"
+      lean: "Frobenius.flag_formula_int"
+      module: "Challenge"
+      status: "proved"
+      note: "Every unit of Z[[x_1..x_n]] with the lift x_i -> x_i^p, every prime, every k >= 1; stated with IsLeast: an identity of level flagValue - 1 exists and none of lower level."
+    - source: "Theorem 7.4 over Z_p"
+      lean: "Frobenius.flag_formula_padic"
+      module: "Challenge"
+      status: "proved"
+      note: "Every unit of Z_p[[x_1..x_n]]."
+    - source: "Theorem 7.7 over Z"
+      lean: "Frobenius.dirichlet_flag_formula_int"
+      module: "Challenge"
+      status: "proved"
+      note: "Every f with f(1) a unit, flag of finite or infinite length; the Lean proof restricts to finitely many primes and uses compactness, not the tower sketched in the paper."
+    - source: "Theorem 7.7 over Z_p"
+      lean: "Frobenius.dirichlet_flag_formula_padic"
+      module: "Challenge"
+      status: "proved"
+      note: "As over Z."
+
+acknowledgements: "Lean 4 and Mathlib; Claude (Anthropic) agent seats for the mathematics and the formalization; the Palomar starter template for the check scripts."

@@ -1,0 +1,26 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "Frobenius.mobius_levels",
+    "Frobenius.kkm_degrees",
+    "Frobenius.kkm_conjecture4",
+    "Frobenius.kkm_greatest_modulus",
+    "Frobenius.dirichlet_identity",
+    "Frobenius.dirichlet_upper",
+    "Frobenius.dirichlet_lower_int",
+    "Frobenius.dirichlet_exact_int",
+    "Frobenius.dirichlet_lower_padic",
+    "Frobenius.dirichlet_exact_padic",
+    "Frobenius.flag_formula_int",
+    "Frobenius.flag_formula_padic",
+    "Frobenius.dirichlet_flag_formula_int",
+    "Frobenius.dirichlet_flag_formula_padic"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

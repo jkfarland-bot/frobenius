@@ -1,0 +1,44 @@
+{
+  "upload_type": "software",
+  "title": "Frobenius: Lean 4 formalization of the Kauers-Krattenthaler-Mueller conjecture for every prime and of the exact number of divisor levels for the Moebius function",
+  "creators": [
+    {
+      "name": "Farland, Joseph S.",
+      "orcid": "0009-0007-6809-804X"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-11-20",
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "description": "<p>Lean 4 and Mathlib formalization of every theorem of the accompanying preprint. For a prime p, a monic A in Z[z][t] of t-degree d with A(z, sum z^(p^n)) congruent to 0 modulo p^gamma exists if and only if p^gamma divides d!, which proves Conjecture 4 of Kauers, Krattenthaler and Mueller (p = 2) and of Krattenthaler and Mueller (every p). In the ring of arithmetic functions with the Frobenius lift E_p, the least number of divisor levels L for which mu is congruent modulo p^k to a sum of d_z * E_p(g_z), z <= L, at every n is S(p^k) - 1, with S the Kempner function; the same bound holds for the Dirichlet inverse of every f with f(1) a unit over every commutative ring, and a depth-flag formula gives the exact count for every unit of Z_p[[x_1, ..., x_n]] with x_i -> x_i^p and for every f with f(1) a unit in the Dirichlet ring over Z or Z_p. 1,980 Lean declarations in the library modules, standard axioms only (propext, Classical.choice, Quot.sound), no sorry. Includes a Palomar statement file (Challenge.lean) with fourteen headline statements, checked against the proofs by lake comparator. CLAIMS.md maps every result of the preprint to its Lean theorems.</p><p>AI assistance: this work was prepared with Claude (Anthropic), an AI model, which helped draft the text, develop and check the proofs, run the computations, and search the literature; the Lean code was written by Claude agents and checked by separate Claude agents that did not write it. The formalized statements are machine-checked in Lean 4; the rest is not. The author, Joseph S. Farland, chose the problems, directed the work, and is responsible for its content. No external human referee has reviewed this work.</p>",
+  "keywords": [
+    "Kempner function",
+    "Moebius function",
+    "Mertens function",
+    "Frobenius lift",
+    "delta-ring",
+    "minimal polynomials",
+    "Dirichlet convolution",
+    "Lean 4",
+    "formal verification"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:1107.2015",
+      "relation": "references",
+      "scheme": "arxiv"
+    },
+    {
+      "identifier": "arXiv:1508.02580",
+      "relation": "references",
+      "scheme": "arxiv"
+    },
+    {
+      "identifier": "arXiv:2105.14841",
+      "relation": "references",
+      "scheme": "arxiv"
+    }
+  ],
+  "notes": "Toolchain: Lean v4.35.0-rc2, Mathlib v4.35.0-rc2 (rev 065356127b1dc0016f66b7283ce0ce2c4055aa55). Build: lake exe cache get && lake build. Palomar checks: python3 scripts/check-lean-sources.py; ruby scripts/validate-formalization.rb; ./scripts/verify-comparator.sh (needs bubblewrap)."
+}
