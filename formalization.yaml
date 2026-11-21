@@ -160,17 +160,20 @@ fidelity:
     gamma = 0 is allowed and 0 is the correct least degree.
 
 review:
-  status: "self-assessed"
+  status: "agent-reviewed"
   reviewers:
-    - "none (no human referee); independent Claude Opus agent seats read every proof and verified every Lean file"
+    - "Claude Opus 5.5 (Anthropic) agent seats that did not write the material they checked: cold readers of every paper proof; seat PV (the Lean port); seat PC (this statement file); seats CC and CF (the preprint against the Lean)"
   notes: >-
-    Each statement in Challenge.lean was compared with the paper by the seat that wrote it and
-    by an independent verifier. The definitions in Challenge.lean are not Comparator holes:
-    definition_names is empty, so Comparator checks every definition the statements use, body
-    included, against Frobenius/Statements.lean, and Solution.lean links those definitions to
-    the development by short bridge lemmas. No external referee has reviewed the paper or the
-    formalization.
-
+    Each Lean file was verified by a seat that did not write it (fresh rebuild, module-wide
+    axiom collector, non-vacuity instances, planted errors). Seat PC compared each statement in
+    Challenge.lean with the result of the preprint it names, checked the byte identity of the
+    definitions with Frobenius/Statements.lean, and confirmed that planted mismatches are
+    rejected; seats CC and CF printed the type of every Lean name cited in the preprint and
+    compared it with the printed statement. The definitions in Challenge.lean are not Comparator
+    holes: definition_names is empty, so Comparator checks every definition the statements use,
+    body included, and Solution.lean links those definitions to the development by short bridge
+    lemmas. No human referee has reviewed the preprint or the formalization; the author is
+    responsible for both.
 alignment:
   namespace: "Frobenius"
   statements:
