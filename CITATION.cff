@@ -12,12 +12,15 @@ identifiers:
     value: 10.5281/zenodo.24410644
     description: "All versions (concept DOI)"
   - type: doi
+    value: 10.5281/zenodo.24466017
+    description: "Version 1.1.0"
+  - type: doi
     value: 10.5281/zenodo.24410645
     description: "Version 1.0.0"
   - type: other
     value: "PALOMAR-2026-11-21-000014"
     description: "Palomar registry entry, version 1 (commit 8587838137d563ef938e2d0db66ac31043cce7ad)"
-date-released: "2026-11-21"
+date-released: "2026-11-23"
 license: Apache-2.0
 repository-code: "https://github.com/jkfarland-bot/frobenius"
 abstract: >-
@@ -44,4 +47,4 @@ references:
         given-names: Joseph S.
     year: 2026
     doi: 10.5281/zenodo.24411194
-    notes: "Preprint (all versions; version 2 matches this release); every theorem is proved in this repository"
+    notes: "Preprint (all versions; version 2.0, 10.5281/zenodo.24466526, matches this release); every theorem is proved in this repository"
