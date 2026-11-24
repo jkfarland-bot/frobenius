@@ -3,7 +3,7 @@
 Every result of the preprint *Minimal polynomials of sum z^(p^n) modulo prime powers: a proof of a
 conjecture of Kauers, Krattenthaler and Mueller, and the exact number of divisor levels for the Moebius
 function* (Joseph S. Farland, 2026), where it came from, how it was checked, and which Lean theorems
-certify it. Numbers are those of version 2 of the preprint (the numbers of version 1 are unchanged). Every result listed is **proved (Lean)**: a kernel-checked
+certify it. Numbers are those of version 2 of the preprint (the numbers of version 1 are unchanged). Version 3.0 (10.5281/zenodo.24488223) presents the same results as two notes: Theorem 5.1, Lemma 5.2 and Proposition 5.3 are Theorem 1, Proposition 3 and Proposition 2 of the first note, *Minimal polynomials of sum z^(p^n) modulo prime powers*; Proposition 5.4 is Proposition 5.1 of the second, *The exact number of divisor levels for the Moebius function*, which keeps every other number. Every result listed is **proved (Lean)**: a kernel-checked
 theorem in this repository, in the form stated in the preprint, on the standard axioms only (propext,
 Classical.choice, Quot.sound), with no `sorry` and no `native_decide`. **Review** gives the independent
 checks besides Lean.
