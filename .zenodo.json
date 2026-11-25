@@ -44,6 +44,12 @@
       "identifier": "arXiv:2105.14841",
       "relation": "references",
       "scheme": "arxiv"
+    },
+    {
+      "identifier": "https://github.com/jkfarland-bot/frobenius",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
     }
   ],
   "notes": "Toolchain: Lean v4.35.0-rc2, Mathlib v4.35.0-rc2 (rev 065356127b1dc0016f66b7283ce0ce2c4055aa55). Build: lake exe cache get && lake build. Palomar checks: python3 scripts/check-lean-sources.py; ruby scripts/validate-formalization.rb; ./scripts/verify-comparator.sh (needs bubblewrap)."
